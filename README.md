@@ -1,7 +1,7 @@
 # pico-log
 An incredibly tiny javascript logging library.
 
-[![NPM](https://nodei.co/npm/pico-flux.png)](https://nodei.co/npm/pico-log/)
+[![NPM](https://nodei.co/npm/pico-log.png)](https://nodei.co/npm/pico-log/)
 
 `pico-log` was inspired by the lovely package [`loglevel`](https://www.npmjs.com/package/loglevel). However `loglevel` lacks one key feature, the ability to set your own logging functions. `pico-log` implements the best parts of `loglevel`, with this feature added.
 
