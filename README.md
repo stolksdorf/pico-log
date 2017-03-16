@@ -6,13 +6,13 @@ An incredibly tiny javascript logging library.
 `pico-log` was inspired by the lovely package [`loglevel`](https://www.npmjs.com/package/loglevel). However `loglevel` lacks one key feature, the ability to set your own logging functions. `pico-log` implements the best parts of `loglevel`, with this feature added.
 
 
-### install
+## install
 
 ```
 npm install --save pico-log
 ```
 
-### features
+## features
 
 - **32 lines of code**
 - Log on 5 different levels, `trace`, `debug`, `info`, `warn`, `error`
@@ -23,18 +23,18 @@ npm install --save pico-log
 
 
 
-### documentation
+## documentation
 
-#### usage
+### usage
 
+```javascript
+const log = require('pico-log');
+log.setLevel('info');
+
+log.debug('Fancy message', false, 6, { nifty : true})
 ```
-    const log = require('pico-log');
-    log.setLevel('info');
 
-    log.debug('Fancy message', false, 6, { nifty : true})
-```
-
-#### logging
+### logging
 
 - `log.trace(arg1, arg2,...)`
 - `log.debug(arg1, arg2,...)`
@@ -42,7 +42,7 @@ npm install --save pico-log
 - `log.warn(arg1, arg2,...)`
 - `log.error(arg1, arg2,...)`
 
-#### `log.setLevel(level)`
+### `log.setLevel(level)`
 
 Disable logging below the specified level. `level` can be the following:
 
@@ -51,27 +51,27 @@ Disable logging below the specified level. `level` can be the following:
 - Numerical index from 0 (trace) to 5 (silent)
 
 
-#### `log.getLevel()`
+### `log.getLevel()`
 
 Returns the current log level as a number, 0 (trace) to 5 (silent).
 
 
-#### `log.levels`
+### `log.levels`
 
 Access to `pico-log`s internal log level list, eg. `log.levels.WARN == 3`
 
 
 
-#### overwriting log methods
+### overwriting log methods
 
 To overwrite a log method, simply assign the function you want to run into the library, eg.
 
-```
-    log.debug = (...args)=>{
-        console.log('DEBUG', ...args);
-    }
+```javascript
+log.debug = (...args)=>{
+    console.log('DEBUG', ...args);
+}
 
-    log.debug('test');
+log.debug('test');
 ```
 
 **Note:** After you overwrite a method, it will log regardless of the level set until `log.setLevel()` is called. `pico-log` caches the logging methods when you set the level and then switches the available methods based on the log level.
