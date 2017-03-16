@@ -1,0 +1,29 @@
+{
+  "name": "pico-log",
+  "version": "1.0.0",
+  "description": "an incerdibly tiny javascript logging library",
+  "main": "pico-log.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stolksdorf/pico-log.git"
+  },
+  "keywords": [
+    "tiny",
+    "javascript",
+    "node",
+    "small",
+    "logging",
+    "loglevel",
+    "pico",
+    "logs"
+  ],
+  "author": "stolksdorf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stolksdorf/pico-log/issues"
+  },
+  "homepage": "https://github.com/stolksdorf/pico-log#readme"
+}
